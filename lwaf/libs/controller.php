@@ -1,5 +1,15 @@
 <?php
 
+/*
+ *
+ * LWAF Controller Class
+ *	
+ * @copyright (C) Chris Mohrhauser
+ * @author Chris Mohrhauser
+ * @package Controller
+ * @version 1.0.0
+*/
+
 class controller{
 	
 	
