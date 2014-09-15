@@ -1,0 +1,56 @@
+
+<IfModule mod_rewrite.c>
+	
+	RewriteEngine On
+	
+	#########################################################################
+	# sets up error docs to process through the error.php page for errors listed
+	#########################################################################	
+
+	ErrorDocument 400 /error.php
+	ErrorDocument 401 /error.php
+	ErrorDocument 403 /error.php
+	ErrorDocument 404 /error.php
+	ErrorDocument 405 /error.php
+	ErrorDocument 406 /error.php
+	ErrorDocument 409 /error.php
+	ErrorDocument 413 /error.php
+	ErrorDocument 414 /error.php
+	ErrorDocument 500 /error.php
+	ErrorDocument 501 /error.php
+	
+	#########################################################################
+	# forces redirect to www.yourdomain.com if yourdomain.com is requested
+	#########################################################################	
+	
+	#RewriteCond %{HTTP_HOST} ^yourdomain.com
+	#RewriteRule (.*) http://www.yourdomain.com/$1 [R=301,L]	
+	
+	#########################################################################
+	# sets up denial of remote file inclusion 
+	#    ( you might want to you this is you do not have mod security enabled )
+	# 		ftp should also be removed but how you use your sever is unknown
+	#########################################################################
+	
+	RewriteCond %{QUERY_STRING} (.*)(http|https|ftp):\/\/(.*)
+	RewriteRule ^(.+)$ - [F]
+	
+	#########################################################################
+	# sets up denial of request methods
+	#########################################################################
+
+	RewriteCond %{REQUEST_METHOD} !^(GET|POST|HEAD)$ [NC]
+	RewriteRule .* - [F]
+	
+	#########################################################################
+	# sets up apps locations for images and static files, pushes urls through index
+	#########################################################################
+
+	RewriteCond %{REQUEST_URI} !^/style/.*
+	RewriteCond %{REQUEST_URI} !^/favicon.ico
+	RewriteCond %{REQUEST_URI} !^/robots.txt
+	RewriteCond %{REQUEST_URI} !^/error.php
+	RewriteCond %{REQUEST_URI} !^/index.php
+	RewriteRule ^(.*)$ index.php?go=$1&%{QUERY_STRING} [L] 
+	
+</IfModule>

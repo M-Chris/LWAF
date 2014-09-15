@@ -1,0 +1,5 @@
+This is a plain text test, with no doctype ( this page could be anything xml json etc. )
+
+
+
+to go back please hit the back btn in your browser
