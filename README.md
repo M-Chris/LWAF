@@ -19,19 +19,19 @@ The LWAF dir should be your sites public dir for your http server (apache is my 
 The base break down of the files inside the leaf dir is such:
 
 
-addins 	    - This is an initializing folder for functions or other assets you want to be included relative to the path executed in the browser. ( I.E. add some_function for the index.php inside the pages folder the folder and files should reflect the same as the pages dir path)
+<b>addins</b> 	    - This is an initializing folder for functions or other assets you want to be included relative to the path executed in the browser. ( I.E. add some_function for the index.php inside the pages folder the folder and files should reflect the same as the pages dir path)
 
-configs 	- place holder for all configs loaded into the app and or your own additionally included configs
+<b>configs</b> 	- place holder for all configs loaded into the app and or your own additionally included configs
 
-functions 	- php functions that will be initiated by the application (please note these must be included through addins  to best utilize the framework)
+<b>functions</b> 	- php functions that will be initiated by the application (please note these must be included through addins  to best utilize the framework)
 
-libs 		- The controller/application class is held. you may also want to include a DBclass, MailClass or other things in this dir.
+<b>libs</b> 		- The controller/application class is held. you may also want to include a DBclass, MailClass or other things in this dir.
 
-pages       - holds all of your public rendered assets (this is your "site")
+<b>pages</b>       - holds all of your public rendered assets (this is your "site")
 
-static 		- place holder for generally static files or includes.
+<b>static</b> 		- place holder for generally static files or includes.
 
-style	 	- all css, images, js, etc.
+<b>style</b>	 	- all css, images, js, etc.
 
 
 
