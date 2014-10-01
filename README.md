@@ -1,7 +1,7 @@
 LWAF
 ====
 
-Light Weight Application Framework - PHP
+LightWeight Application Framework - PHP
 
 
 The entire framework is self sufficient and is <u>not</u> an end all be all library, however it shows how elegant and simple a framework in php can actually be. I wrote this in about a day and figured I could share it with others that maybe want something to get started with in their overall pursuit and growth with php. This is a good beginning for any developer out there that might want some insight without a million lines of code to sort through, when said lines may or may not be useful in an everyday type of application or all the extra bloat many frameworks come with.
